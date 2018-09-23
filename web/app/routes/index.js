@@ -127,11 +127,13 @@ router.get('/stats', async function(req, res, next) {
 		let itemsReleasedByDay = await appointmentService.getReleasedByDay();
 		// todays appointments 
 		let todaysAppointments = (await appointmentService.todayAppointments()).length;
+		let pendingAppointments = (await appointmentService.getPending()).length;
 		
 
 		res.send({ 
 			clients, clientsByMinority,
-			donors, todaysAppointments, 
+			donors, todaysAppointments,
+			pendingAppointments, 
 			itemsInStore, itemsPending, 
 			itemsReleasedByDay,
 			groupByAgency
