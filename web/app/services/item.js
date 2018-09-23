@@ -94,6 +94,7 @@ class ItemService {
     }
 
     let droppedItems = data.items;
+    console.log(data)
     for(let j = 0; j < droppedItems.length; j++) {
       let droppedItem = await itemModel.findById(droppedItems[j]._id);
 
