@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58ce7956-1ea9-406b-af61-9b76086c284d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ios/Assets.xcassets/CON_hats.imageset/CON_hats.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Assets.xcassets/CON_hats.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Assets.xcassets/bgmobile2.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/Assets.xcassets/bgmobile2.imageset/bgmobile2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ios/models/Post.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/ios.xcodeproj/project.pbxproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios.xcworkspace/xcuserdata/andy.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" afterPath="$PROJECT_DIR$/ios.xcworkspace/xcuserdata/andy.xcuserdatad/UserInterfaceState.xcuserstate" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios.xcworkspace/xcuserdata/andy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" afterPath="$PROJECT_DIR$/ios.xcworkspace/xcuserdata/andy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Base.lproj/Main.storyboard" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Base.lproj/Main.storyboard" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/ios/Info.plist" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/models/Size.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/models/Size.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/models/Type.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/models/Type.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/viewcontroller/ApparelTypeTableViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/viewcontroller/ApparelTypeTableViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ios/viewcontroller/ApparelViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/viewcontroller/ApparelViewController.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../web/app/services/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/../web/app/services/item.js" afterDir="false" />
     </list>
     <ignored path="$USER_HOME$/Library/Developer/Xcode/DerivedData/bakon_vanhacks_2018-gtetggrcepcitpemdamtrmupqwdl/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +15,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_C0FF62D3-9E72-4A28-ADF4-D583193AF746" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_3198B2B7-4C22-45FB-ABE9-4EB52F5AE252" />
   <component name="FUSProjectUsageTrigger">
     <session id="1373590887">
       <usages-collector id="statistics.lifecycle.project">
@@ -75,12 +64,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="swift" value="7790" />
+          <entry key="swift" value="7990" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Swift" value="7790" />
+          <entry key="Swift" value="7990" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.appcode.build">
@@ -95,8 +84,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
+            <state relative-caret-position="608">
+              <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -122,6 +111,7 @@
       <find>append</find>
       <find>_id</find>
       <find>selectedRow</find>
+      <find>json</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -261,12 +251,12 @@
       <workItem from="1537649724054" duration="33000" />
       <workItem from="1537649827587" duration="332000" />
       <workItem from="1537650200022" duration="373000" />
-      <workItem from="1537650669145" duration="21233000" />
+      <workItem from="1537650669145" duration="22736000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23317000" />
+    <option name="totallyTimeSpent" value="24820000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -288,7 +278,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3284356" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32929993" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32929993" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4070873" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -320,12 +310,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift</url>
-          <line>140</line>
+          <line>141</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift</url>
-          <line>144</line>
+          <line>145</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
@@ -542,8 +532,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ios/viewcontroller/ItemListController.swift">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="169" column="31" selection-start-line="169" selection-start-column="31" selection-end-line="169" selection-end-column="31" />
+        <state relative-caret-position="608">
+          <caret line="179" column="84" selection-start-line="179" selection-start-column="84" selection-end-line="179" selection-end-column="84" />
         </state>
       </provider>
     </entry>

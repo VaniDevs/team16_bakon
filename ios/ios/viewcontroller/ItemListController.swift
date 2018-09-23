@@ -130,9 +130,10 @@ class ItemListController: UIViewController,
         let jsonData = try? JSONSerialization.data(withJSONObject: grabApparelsAsParams())
 
         // create post request
-        let url = URL(string: "http://localhost/items/drop")!
+        let url = URL(string: "http://localhost:3000/items/drop")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
+        request.setValue("Application/json", forHTTPHeaderField: "Content-Type")
 
         // insert json data to the request
         request.httpBody = jsonData
@@ -151,7 +152,7 @@ class ItemListController: UIViewController,
         task.resume()
     }
 
-    private func grabApparelsAsParams() -> [Dictionary<String, Any>] {
+    private func grabApparelsAsParams() -> Dictionary<String, Any> {
         var postApparel = [Dictionary<String, Any>]()
         for apparel in apparels {
             switch (apparel.type?.label) {
@@ -176,6 +177,24 @@ class ItemListController: UIViewController,
             }
         }
 
-        return postApparel
+        let postBody: Dictionary<String, Any> = ["email": randomString(length: 10) + "@goodperson.com", "items": postApparel]
+
+        return postBody
+    }
+
+    func randomString(length: Int) -> String {
+
+        let letters : NSString = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        let len = UInt32(letters.length)
+
+        var randomString = ""
+
+        for _ in 0 ..< length {
+            let rand = arc4random_uniform(len)
+            var nextChar = letters.character(at: Int(rand))
+            randomString += NSString(characters: &nextChar, length: 1) as String
+        }
+
+        return randomString
     }
 }
