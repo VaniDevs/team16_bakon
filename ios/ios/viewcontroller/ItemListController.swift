@@ -124,6 +124,25 @@ class ItemListController: UIViewController,
 
     @IBAction func submitApparelsToServer() {
         postAction()
+        clearApparel()
+        showAlert("Apparel submitted")
+    }
+
+    private func clearApparel() {
+        apparels = []
+        tableView.reloadData()
+    }
+
+    private func showAlert(_ message: String) {
+        let alert = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+        self.present(alert, animated: true)
+
+        // duration in seconds
+        let duration: Double = 5
+
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + duration) {
+            alert.dismiss(animated: true)
+        }
     }
 
     func postAction() {
