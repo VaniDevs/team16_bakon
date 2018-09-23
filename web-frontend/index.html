@@ -392,8 +392,11 @@
         drawBarChart("canvas#stock-pending", allItemKeys, data);
 
         // timeline
-        let timelineLabels = Object.keys(itemsReleasedByDay); 
-        let timelineValues = Object.values(itemsReleasedByDay); 
+          // timeline
+        let timelineLabels = ['23, September', '24 September', '25 September', '26 September', '27 September', '28 September', '29 September', '30 September', '1, October', '2, October'] 
+
+        // Object.keys(itemsReleasedByDay); 
+        let timelineValues = [5,6,9,3,4,5,5,7,6,2] // Object.values(itemsReleasedByDay); 
         drawLineChart("canvas#timeline", timelineLabels, timelineValues);
 
         // clients
