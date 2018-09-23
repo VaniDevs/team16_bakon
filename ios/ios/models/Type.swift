@@ -10,22 +10,41 @@ class Type: NSObject {
     let label: String
     let image: UIImage?
     static let allValues = [
-        Type(label: "Business suits and sport jackets", image: UIImage(named: "BUS_Blazer")),
-        Type(label: "Slacks and pants", image: UIImage(named: "BUS_Pants")),
-        Type(label: "Business shoes and belts", image: UIImage(named: "BUS_Belt")),
-        Type(label: "Dress Shirts", image: UIImage(named: "BUS_shirt")),
-        Type(label: "Business casual attire", image: UIImage(named: "BUS_shoe")),
-        Type(label: "Outerwear", image: UIImage(named: "BUS_Suit")),
-        Type(label: "Steel toed work boots", image: UIImage(named: "CON_gloves")),
-        Type(label: "Work overalls", image: UIImage(named: "CON_overalls")),
-        Type(label: "Rain gear", image: UIImage(named: "CON_raingear")),
-        Type(label: "Work gloves", image: UIImage(named: "CON_gloves")),
-        Type(label: "Tool belts", image: UIImage(named: "CON_toolbelt")),
-        Type(label: "Hard hats and goggles", image: UIImage(named: "CON_Goggles")),
+        Type(label: TypeEnums.Business_suits.rawValue, image: UIImage(named: "BUS_Blazer")),
+        Type(label: TypeEnums.Sport_Jackets.rawValue, image: UIImage(named: "BUS_Blazer")),
+        Type(label: TypeEnums.Slacks_and_pants.rawValue, image: UIImage(named: "BUS_Pants")),
+        Type(label: TypeEnums.Business_shoes.rawValue, image: UIImage(named: "BUS_Belt")),
+        Type(label: TypeEnums.Belts.rawValue, image: UIImage(named: "BUS_Belt")),
+        Type(label: TypeEnums.Dress_Shirts.rawValue, image: UIImage(named: "BUS_shirt")),
+        Type(label: TypeEnums.Business_casual_attire.rawValue, image: UIImage(named: "BUS_shoe")),
+        Type(label: TypeEnums.Outerwear.rawValue, image: UIImage(named: "BUS_Suit")),
+        Type(label: TypeEnums.Steel_toed_work_boots.rawValue, image: UIImage(named: "CON_gloves")),
+        Type(label: TypeEnums.Work_overalls.rawValue, image: UIImage(named: "CON_overalls")),
+        Type(label: TypeEnums.Rain_gear.rawValue, image: UIImage(named: "CON_raingear")),
+        Type(label: TypeEnums.Work_gloves.rawValue, image: UIImage(named: "CON_gloves")),
+        Type(label: TypeEnums.Tool_belts.rawValue, image: UIImage(named: "CON_toolbelt")),
+        Type(label: TypeEnums.Hard_hats_and_goggles.rawValue, image: UIImage(named: "CON_Goggles")),
     ]
 
     init(label: String, image: UIImage?) {
         self.label = label
         self.image = image;
     }
+}
+
+enum TypeEnums: String {
+    case Business_suits = "Business suits",
+         Sport_Jackets = "Sport Jackets",
+         Slacks_and_pants = "Slacks and pants",
+         Business_shoes = "Business shoes",
+         Belts = "Belts",
+         Dress_Shirts = "Dress Shirts",
+         Business_casual_attire = "Business casual attire",
+         Outerwear = "Outerwear",
+         Steel_toed_work_boots = "Steel toed work boots",
+         Work_overalls = "Work overalls",
+         Rain_gear = "Rain gear",
+         Work_gloves = "Work gloves",
+         Tool_belts = "Tool belts",
+         Hard_hats_and_goggles = "Hard hats and goggles"
 }

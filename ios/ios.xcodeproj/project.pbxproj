@@ -11,6 +11,7 @@
 		1F2A7BB58E12E7B27EA210A3 /* Pods_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D35F536E589CF3D7A3D2E6B /* Pods_ios.framework */; };
 		2DC1814F0DC4034EEAF91B4B /* Apparel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC181B7E5F092AC4EA2883B /* Apparel.swift */; };
 		2DC185DF3F5D1CA50B490B35 /* Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC183D10A3610CD24BB29EF /* Type.swift */; };
+		2DC1884466355013522D24BF /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC18B76649A2A6FA9B07D7A /* Post.swift */; };
 		2DC188B6EA2557422B94EFB0 /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC181E6F36D31771084CB8E /* Size.swift */; };
 		6E1FD0173311D54A340B3616 /* Pods_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 716E100426D9BF39419B18F9 /* Pods_iosTests.framework */; };
 		A1D3228B2156C49000C7AFF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D3228A2156C49000C7AFF8 /* AppDelegate.swift */; };
@@ -50,6 +51,7 @@
 		2DC181B7E5F092AC4EA2883B /* Apparel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Apparel.swift; sourceTree = "<group>"; };
 		2DC181E6F36D31771084CB8E /* Size.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Size.swift; sourceTree = "<group>"; };
 		2DC183D10A3610CD24BB29EF /* Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Type.swift; sourceTree = "<group>"; };
+		2DC18B76649A2A6FA9B07D7A /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		652524D85866399EB37A3BFA /* Pods-iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iosUITests/Pods-iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		6D35F536E589CF3D7A3D2E6B /* Pods_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		716E100426D9BF39419B18F9 /* Pods_iosTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iosTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				2DC181B7E5F092AC4EA2883B /* Apparel.swift */,
 				2DC181E6F36D31771084CB8E /* Size.swift */,
 				2DC183D10A3610CD24BB29EF /* Type.swift */,
+				2DC18B76649A2A6FA9B07D7A /* Post.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 				A1D322C821570FAF00C7AFF8 /* ApparelTypeTableViewCell.swift in Sources */,
 				A1D322BF2156EA8B00C7AFF8 /* ItemListController.swift in Sources */,
 				2DC185DF3F5D1CA50B490B35 /* Type.swift in Sources */,
+				2DC1884466355013522D24BF /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
