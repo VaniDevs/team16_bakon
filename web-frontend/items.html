@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins.-->
+  <link rel="stylesheet" href="dist/css/skins/skin-yellow.min.css">
+
+  <style>
+    .main-header nav.navbar {
+      background-color: #222d32 !important;
+    }
+  </style>
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-yellow sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>W</b>G</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Working</b>Gear</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/wg5-01.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Working Gear</p>
+          <a href="#"> Admin</a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li>
+          <a href="index.html">
+            <i class="fa fa-pie-chart"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="appointments.html">
+            <i class="fa fa-clock-o"></i> <span>Appointment Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html">
+            <i class="fa fa-calendar"></i> <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="items.html">
+            <i class="ion ion-ios-box-outline"></i> <span>Inventory Items</span>
+          </a>
+        </li>
+         <li>
+          <a href="pages/widgets.html">
+            <i class="ion ion-android-person-add"></i> <span>Donors</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Volunteers</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-line-chart"></i> <span>Forecasting</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Donate</h3>
+            </div>
+
+            <form id="form-donate" action="#" role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Donor</label>
+                  <input type="email" class="form-control" name="email" placeholder="Email">
+                </div>
+
+                <div class="form-group">
+                  <label>Add Items</label>
+                  <div class="row add-item">
+                    <div class="col-md-5" style="padding-right: 5px">
+                      <select class="item-category form-control">
+                        <option></option>
+                      </select>
+                    </div>
+                    <div class="col-md-5" style="padding-left: 5px">
+                      <select name="item" class="item-size form-control">
+                      </select>
+                    </div>
+                    <div class="col-md-2" style="padding-left: 5px">
+                      <input type="number" class="form-control" name="count" placeholder="Count" value="1">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="add-item" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add Item</button>
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="submit-donation" class="btn btn-success pull-right">Submit</button>
+              </div>
+            </form>
+            <!-- /.box-header -->
+            <!-- form start -->            
+          </div>
+          <!-- /.box -->
+        </div>
+
+        <div class="col-md-6">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Pickup</h3>
+            </div>
+
+            <form id="form-pickup" action="#" role="form">
+              <div class="box-body">
+                <div class="form-group">
+                  <label>Today's Appointments</label>
+                  <select id="appointmentId" name="appointmentId" class="form-control" required>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label>Add Items</label>
+                  <div class="row add-item">
+                    <div class="col-md-5" style="padding-right: 5px">
+                      <select class="item-category form-control">
+                        <option></option>
+                      </select>
+                    </div>
+                    <div class="col-md-5" style="padding-left: 5px">
+                      <select name="item" class="item-size form-control">
+                      </select>
+                    </div>
+                    <div class="col-md-2" style="padding-left: 5px">
+                      <input type="number" class="form-control" name="count" placeholder="Count" value="1">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="add-item" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add Item</button>
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="submit-pickup" class="btn btn-success pull-right">Submit</button>
+              </div>
+            </form>
+            <!-- /.box-header -->
+            <!-- form start -->            
+          </div>
+          <!-- /.box -->
+        </div>
+
+        <!--/.col (left) -->
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2018 <a href="http://workinggear.ca">Working Gear</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<script>
+$(function () {
+  function ajax(method, url, data, callback) {
+    let request;
+
+    if (method === "POST")        request = $.ajax({ type: "POST", url, 
+        data: JSON.stringify(data), contentType: "application/json; charset=utf-8", dataType: "json" });
+    else if(method === "PUT")     request = $.ajax({ type: 'PUT', url, data });
+    else if(method === "DELETE")  request = $.ajax({ type: 'DELETE', url });
+    else                          request = $.get(url);
+
+    request
+    .done(function(response) {
+      callback(null, response);
+    }).fail(function(err) {
+      callback(err);
+    });
+  }
+
+  // appointments
+  ajax('GET', `http://localhost:3000/appointments/today`, null, function(err, appointments) {
+    console.log(appointments);
+    appointments.forEach(app => { 
+      $("select#appointmentId").append(`<option value="${app._id}">${app.agency} - ${app.client} - ${app.date}</option>`);
+    });
+  });
+
+  // items
+  ajax('GET', `http://localhost:3000/items`, null, function(err, items) {
+    if(err) { return; }
+    let categories = Object.keys(items);
+
+    // add items categories
+    categories.forEach(cat => { 
+      $("select.item-category").append(`<option value="${cat}">${cat}</option>`);
+    });
+
+    // add sizes
+    function onCategoryChange() {
+      $("#form-donate select.item-category:last, #form-pickup select.item-category:last").change(function(e) {
+        var ele = $(this).parent().parent().find("select.item-size");
+        $(ele).html('');
+        let cat = $(this).val();
+        if(!cat) { return; }
+
+        var sizes = items[cat];
+        sizes.forEach(size => { 
+          $(ele).append(`<option value="${size._id}">${size.size}</option>`);
+        });
+      });      
+    }
+    onCategoryChange();
+
+    $("button#add-item").click(function(e) {
+      e.preventDefault();
+
+      let ele = `<div class="row add-item" style="margin-top: 5px;">`
+      ele += `<div class="col-md-5" style="padding-right: 5px">
+                <select class="item-category form-control" required>`;
+      ele += `<option></option>`;
+      
+      categories.forEach(cat => {
+        ele += `<option value="${cat}">${cat}</option>`
+      });
+      ele += `</select></div>
+              <div class="col-md-5" style="padding-left: 5px">
+                <select name="item" class="item-size form-control" required></select>
+              </div>`;
+      ele += `<div class="col-md-2" style="padding-left: 5px">
+                <input type="number" class="form-control" name="count" placeholder="Count" value="1">
+              </div>`
+      ele += `</div>`;
+
+      $(this).parent().parent().find("div.row.add-item:last").after(ele);
+      onCategoryChange();
+
+      return false; 
+    });
+
+  });
+
+  // submit donation
+  $("button#submit-donation").click(function(e) {
+    e.preventDefault();
+    var data = {
+      email: '',
+      items: []
+    };
+
+    var itemsIndex = 0;
+    $('form#form-donate').serialize().split("&").forEach(function(curr){
+      var p = curr.split("=");
+      var key = decodeURIComponent(p[0]);
+      var value = decodeURIComponent(p[1]);
+      if(!value) { return; }
+
+      if(key === 'item' || key === 'count') { 
+        if(data.items[itemsIndex] === undefined) { data.items[itemsIndex] = {} }
+        if(key === 'item') {
+          data.items[itemsIndex]._id = value;
+        } else {
+          if(!data.items[itemsIndex]._id) { data.items = [];  itemsIndex = 0; return; }
+          data.items[itemsIndex].count = parseInt(value);
+          itemsIndex++;
+        }
+      } else if (key === 'email') {
+        data.email = value; 
+      } 
+    });
+
+    if(!data.email || !data.items.length) {
+      return alert('Missing values.');
+    }
+    
+    // send data
+    console.log(data);
+    ajax('POST', `http://localhost:3000/items/drop`, data, function(err, response) {
+      if(err || response.error) { return alert(err || response.error); }
+      alert('Thank you!.');
+      location.reload();
+    });
+
+    return false; 
+  });
+  
+
+  // submit pickup
+  $("button#submit-pickup").click(function(e) {
+    e.preventDefault();
+
+    var data = {
+      appointmentId: '',
+      items: []
+    };
+
+    var itemsIndex = 0;
+    $('form#form-pickup').serialize().split("&").forEach(function(curr){
+      var p = curr.split("=");
+      var key = decodeURIComponent(p[0]);
+      var value = decodeURIComponent(p[1]);
+      if(!value) { return; }
+
+      if(key === 'item' || key === 'count') { 
+        if(data.items[itemsIndex] === undefined) { data.items[itemsIndex] = {} }
+        if(key === 'item') {
+          data.items[itemsIndex]._id = value;
+        } else {
+          if(!data.items[itemsIndex]._id) { data.items = [];  itemsIndex = 0; return; }
+          data.items[itemsIndex].count = parseInt(value);
+          itemsIndex++;
+        }
+      } else if (key === 'appointmentId') {
+        data.appointmentId = value; 
+      } 
+    });
+
+    if(!data.appointmentId || !data.items.length) {
+      return alert('Missing values.');
+    }
+    
+    // send data
+    console.log(data);
+    ajax('POST', `http://localhost:3000/items/pick`, data, function(err, response) {
+      if(err || response.error) { return alert(err || response.error); }
+      alert('Thank you!.');
+      location.reload();
+    });
+
+    return false;
+  });
+});
+</script>
+</body>
+</html>

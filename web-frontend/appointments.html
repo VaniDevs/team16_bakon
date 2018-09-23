@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins.-->
+  <link rel="stylesheet" href="dist/css/skins/skin-yellow.min.css">
+
+  <style>
+    .main-header nav.navbar {
+      background-color: #222d32 !important;
+    }
+  </style>
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+</head>
+<body class="hold-transition skin-yellow sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="#" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>W</b>G</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Working</b>Gear</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+    </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/wg5-01.png" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>ACCESS Futures</p>
+          <a href="#"> Agency</a>
+        </div>
+      </div>
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li>
+          <a href="index.html">
+            <i class="fa fa-pie-chart"></i> <span>Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fa fa-clock-o"></i> <span>Appointment Booking</span>
+          </a>
+        </li>
+        <li>
+          <a href="calendar.html">
+            <i class="fa fa-calendar"></i> <span>Calendar</span>
+          </a>
+        </li>
+        <li>
+          <a href="items.html">
+            <i class="ion ion-ios-box-outline"></i> <span>Inventory Items</span>
+          </a>
+        </li>
+         <li>
+          <a href="pages/widgets.html">
+            <i class="ion ion-android-person-add"></i> <span>Donors</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Volunteers</span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-line-chart"></i> <span>Forecasting</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Appointment Booking
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Appointment Booking</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <!-- Small boxes (Stat box) -->
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-12">
+          <!-- general form elements -->
+          <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Create Booking</h3>
+            </div>
+
+            <form id="form-appointment" action="#" role="form">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label>Agency</label>
+                      <div class="row">
+                        <div class="col-md-6">
+                          <select id="agency" name="agencyId" class="form-control" required disabled="">
+                            <option value="5ba6d04a4d117e2c986237e4" selected="">ACCESS Futures</option>
+                            <option value="5ba6d10c7c7243339bf93f17">Avia Employment</option>
+                            <option value="5ba6d1717c7243339bf93f19">Community Employment Services (CES)</option>
+                          </select>
+                          <input type="hidden" class="form-control" name="agencyId" value="5ba6d04a4d117e2c986237e4" hidden>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Pick a slot</label>
+                      <div class="row">
+                        <div class="col-md-6" style="padding-right: 5px">
+                          <select id="slot-day" class="form-control" required>
+                            <option></option>
+                          </select>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 5px">
+                          <select id="slot-minute" name="slotId" class="form-control" required >
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label>Client</label>
+                      <div class="row">
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <input type="text" class="form-control" name="name" placeholder="Name" required>
+                        </div>
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <input type="email" class="form-control" name="email" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="row" style="margin-top: 5px;">
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <input type="number" class="form-control" name="age" placeholder="Age">
+                        </div>
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <select id="gender" name="gender" class="form-control" required >
+                            <option value="">Gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Non-Binary">Non-binary</option>
+                          </select>
+                        </div>
+                        </div>
+                      <div class="row" style="margin-top: 5px;">
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <input type="text" class="form-control" name="job" placeholder="Desired Occupation">
+                        </div>
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <input type="text" class="form-control" name="city" placeholder="City">
+                        </div>
+                       
+                        <!--<div class="col-md-12">
+                          <select name="country" class="form-control">
+                            <option value="">Country</option>
+                            <option value="AFG">Afghanistan</option>
+                            <option value="ALA">Åland Islands</option>
+                            <option value="ALB">Albania</option>
+                            <option value="DZA">Algeria</option>
+                            <option value="ASM">American Samoa</option>
+                            <option value="AND">Andorra</option>
+                            <option value="AGO">Angola</option>
+                            <option value="AIA">Anguilla</option>
+                            <option value="ATA">Antarctica</option>
+                            <option value="ATG">Antigua and Barbuda</option>
+                            <option value="ARG">Argentina</option>
+                            <option value="ARM">Armenia</option>
+                            <option value="ABW">Aruba</option>
+                            <option value="AUS">Australia</option>
+                            <option value="AUT">Austria</option>
+                            <option value="AZE">Azerbaijan</option>
+                            <option value="BHS">Bahamas</option>
+                            <option value="BHR">Bahrain</option>
+                            <option value="BGD">Bangladesh</option>
+                            <option value="BRB">Barbados</option>
+                            <option value="BLR">Belarus</option>
+                            <option value="BEL">Belgium</option>
+                            <option value="BLZ">Belize</option>
+                            <option value="BEN">Benin</option>
+                            <option value="BMU">Bermuda</option>
+                            <option value="BTN">Bhutan</option>
+                            <option value="BOL">Bolivia, Plurinational State of</option>
+                            <option value="BES">Bonaire, Sint Eustatius and Saba</option>
+                            <option value="BIH">Bosnia and Herzegovina</option>
+                            <option value="BWA">Botswana</option>
+                            <option value="BVT">Bouvet Island</option>
+                            <option value="BRA">Brazil</option>
+                            <option value="IOT">British Indian Ocean Territory</option>
+                            <option value="BRN">Brunei Darussalam</option>
+                            <option value="BGR">Bulgaria</option>
+                            <option value="BFA">Burkina Faso</option>
+                            <option value="BDI">Burundi</option>
+                            <option value="KHM">Cambodia</option>
+                            <option value="CMR">Cameroon</option>
+                            <option value="CAN">Canada</option>
+                            <option value="CPV">Cape Verde</option>
+                            <option value="CYM">Cayman Islands</option>
+                            <option value="CAF">Central African Republic</option>
+                            <option value="TCD">Chad</option>
+                            <option value="CHL">Chile</option>
+                            <option value="CHN">China</option>
+                            <option value="CXR">Christmas Island</option>
+                            <option value="CCK">Cocos (Keeling) Islands</option>
+                            <option value="COL">Colombia</option>
+                            <option value="COM">Comoros</option>
+                            <option value="COG">Congo</option>
+                            <option value="COD">Congo, the Democratic Republic of the</option>
+                            <option value="COK">Cook Islands</option>
+                            <option value="CRI">Costa Rica</option>
+                            <option value="CIV">Côte d'Ivoire</option>
+                            <option value="HRV">Croatia</option>
+                            <option value="CUB">Cuba</option>
+                            <option value="CUW">Curaçao</option>
+                            <option value="CYP">Cyprus</option>
+                            <option value="CZE">Czech Republic</option>
+                            <option value="DNK">Denmark</option>
+                            <option value="DJI">Djibouti</option>
+                            <option value="DMA">Dominica</option>
+                            <option value="DOM">Dominican Republic</option>
+                            <option value="ECU">Ecuador</option>
+                            <option value="EGY">Egypt</option>
+                            <option value="SLV">El Salvador</option>
+                            <option value="GNQ">Equatorial Guinea</option>
+                            <option value="ERI">Eritrea</option>
+                            <option value="EST">Estonia</option>
+                            <option value="ETH">Ethiopia</option>
+                            <option value="FLK">Falkland Islands (Malvinas)</option>
+                            <option value="FRO">Faroe Islands</option>
+                            <option value="FJI">Fiji</option>
+                            <option value="FIN">Finland</option>
+                            <option value="FRA">France</option>
+                            <option value="GUF">French Guiana</option>
+                            <option value="PYF">French Polynesia</option>
+                            <option value="ATF">French Southern Territories</option>
+                            <option value="GAB">Gabon</option>
+                            <option value="GMB">Gambia</option>
+                            <option value="GEO">Georgia</option>
+                            <option value="DEU">Germany</option>
+                            <option value="GHA">Ghana</option>
+                            <option value="GIB">Gibraltar</option>
+                            <option value="GRC">Greece</option>
+                            <option value="GRL">Greenland</option>
+                            <option value="GRD">Grenada</option>
+                            <option value="GLP">Guadeloupe</option>
+                            <option value="GUM">Guam</option>
+                            <option value="GTM">Guatemala</option>
+                            <option value="GGY">Guernsey</option>
+                            <option value="GIN">Guinea</option>
+                            <option value="GNB">Guinea-Bissau</option>
+                            <option value="GUY">Guyana</option>
+                            <option value="HTI">Haiti</option>
+                            <option value="HMD">Heard Island and McDonald Islands</option>
+                            <option value="VAT">Holy See (Vatican City State)</option>
+                            <option value="HND">Honduras</option>
+                            <option value="HKG">Hong Kong</option>
+                            <option value="HUN">Hungary</option>
+                            <option value="ISL">Iceland</option>
+                            <option value="IND">India</option>
+                            <option value="IDN">Indonesia</option>
+                            <option value="IRN">Iran, Islamic Republic of</option>
+                            <option value="IRQ">Iraq</option>
+                            <option value="IRL">Ireland</option>
+                            <option value="IMN">Isle of Man</option>
+                            <option value="ISR">Israel</option>
+                            <option value="ITA">Italy</option>
+                            <option value="JAM">Jamaica</option>
+                            <option value="JPN">Japan</option>
+                            <option value="JEY">Jersey</option>
+                            <option value="JOR">Jordan</option>
+                            <option value="KAZ">Kazakhstan</option>
+                            <option value="KEN">Kenya</option>
+                            <option value="KIR">Kiribati</option>
+                            <option value="PRK">Korea, Democratic People's Republic of</option>
+                            <option value="KOR">Korea, Republic of</option>
+                            <option value="KWT">Kuwait</option>
+                            <option value="KGZ">Kyrgyzstan</option>
+                            <option value="LAO">Lao People's Democratic Republic</option>
+                            <option value="LVA">Latvia</option>
+                            <option value="LBN">Lebanon</option>
+                            <option value="LSO">Lesotho</option>
+                            <option value="LBR">Liberia</option>
+                            <option value="LBY">Libya</option>
+                            <option value="LIE">Liechtenstein</option>
+                            <option value="LTU">Lithuania</option>
+                            <option value="LUX">Luxembourg</option>
+                            <option value="MAC">Macao</option>
+                            <option value="MKD">Macedonia, the former Yugoslav Republic of</option>
+                            <option value="MDG">Madagascar</option>
+                            <option value="MWI">Malawi</option>
+                            <option value="MYS">Malaysia</option>
+                            <option value="MDV">Maldives</option>
+                            <option value="MLI">Mali</option>
+                            <option value="MLT">Malta</option>
+                            <option value="MHL">Marshall Islands</option>
+                            <option value="MTQ">Martinique</option>
+                            <option value="MRT">Mauritania</option>
+                            <option value="MUS">Mauritius</option>
+                            <option value="MYT">Mayotte</option>
+                            <option value="MEX">Mexico</option>
+                            <option value="FSM">Micronesia, Federated States of</option>
+                            <option value="MDA">Moldova, Republic of</option>
+                            <option value="MCO">Monaco</option>
+                            <option value="MNG">Mongolia</option>
+                            <option value="MNE">Montenegro</option>
+                            <option value="MSR">Montserrat</option>
+                            <option value="MAR">Morocco</option>
+                            <option value="MOZ">Mozambique</option>
+                            <option value="MMR">Myanmar</option>
+                            <option value="NAM">Namibia</option>
+                            <option value="NRU">Nauru</option>
+                            <option value="NPL">Nepal</option>
+                            <option value="NLD">Netherlands</option>
+                            <option value="NCL">New Caledonia</option>
+                            <option value="NZL">New Zealand</option>
+                            <option value="NIC">Nicaragua</option>
+                            <option value="NER">Niger</option>
+                            <option value="NGA">Nigeria</option>
+                            <option value="NIU">Niue</option>
+                            <option value="NFK">Norfolk Island</option>
+                            <option value="MNP">Northern Mariana Islands</option>
+                            <option value="NOR">Norway</option>
+                            <option value="OMN">Oman</option>
+                            <option value="PAK">Pakistan</option>
+                            <option value="PLW">Palau</option>
+                            <option value="PSE">Palestinian Territory, Occupied</option>
+                            <option value="PAN">Panama</option>
+                            <option value="PNG">Papua New Guinea</option>
+                            <option value="PRY">Paraguay</option>
+                            <option value="PER">Peru</option>
+                            <option value="PHL">Philippines</option>
+                            <option value="PCN">Pitcairn</option>
+                            <option value="POL">Poland</option>
+                            <option value="PRT">Portugal</option>
+                            <option value="PRI">Puerto Rico</option>
+                            <option value="QAT">Qatar</option>
+                            <option value="REU">Réunion</option>
+                            <option value="ROU">Romania</option>
+                            <option value="RUS">Russian Federation</option>
+                            <option value="RWA">Rwanda</option>
+                            <option value="BLM">Saint Barthélemy</option>
+                            <option value="SHN">Saint Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KNA">Saint Kitts and Nevis</option>
+                            <option value="LCA">Saint Lucia</option>
+                            <option value="MAF">Saint Martin (French part)</option>
+                            <option value="SPM">Saint Pierre and Miquelon</option>
+                            <option value="VCT">Saint Vincent and the Grenadines</option>
+                            <option value="WSM">Samoa</option>
+                            <option value="SMR">San Marino</option>
+                            <option value="STP">Sao Tome and Principe</option>
+                            <option value="SAU">Saudi Arabia</option>
+                            <option value="SEN">Senegal</option>
+                            <option value="SRB">Serbia</option>
+                            <option value="SYC">Seychelles</option>
+                            <option value="SLE">Sierra Leone</option>
+                            <option value="SGP">Singapore</option>
+                            <option value="SXM">Sint Maarten (Dutch part)</option>
+                            <option value="SVK">Slovakia</option>
+                            <option value="SVN">Slovenia</option>
+                            <option value="SLB">Solomon Islands</option>
+                            <option value="SOM">Somalia</option>
+                            <option value="ZAF">South Africa</option>
+                            <option value="SGS">South Georgia and the South Sandwich Islands</option>
+                            <option value="SSD">South Sudan</option>
+                            <option value="ESP">Spain</option>
+                            <option value="LKA">Sri Lanka</option>
+                            <option value="SDN">Sudan</option>
+                            <option value="SUR">Suriname</option>
+                            <option value="SJM">Svalbard and Jan Mayen</option>
+                            <option value="SWZ">Swaziland</option>
+                            <option value="SWE">Sweden</option>
+                            <option value="CHE">Switzerland</option>
+                            <option value="SYR">Syrian Arab Republic</option>
+                            <option value="TWN">Taiwan, Province of China</option>
+                            <option value="TJK">Tajikistan</option>
+                            <option value="TZA">Tanzania, United Republic of</option>
+                            <option value="THA">Thailand</option>
+                            <option value="TLS">Timor-Leste</option>
+                            <option value="TGO">Togo</option>
+                            <option value="TKL">Tokelau</option>
+                            <option value="TON">Tonga</option>
+                            <option value="TTO">Trinidad and Tobago</option>
+                            <option value="TUN">Tunisia</option>
+                            <option value="TUR">Turkey</option>
+                            <option value="TKM">Turkmenistan</option>
+                            <option value="TCA">Turks and Caicos Islands</option>
+                            <option value="TUV">Tuvalu</option>
+                            <option value="UGA">Uganda</option>
+                            <option value="UKR">Ukraine</option>
+                            <option value="ARE">United Arab Emirates</option>
+                            <option value="GBR">United Kingdom</option>
+                            <option value="USA">United States</option>
+                            <option value="UMI">United States Minor Outlying Islands</option>
+                            <option value="URY">Uruguay</option>
+                            <option value="UZB">Uzbekistan</option>
+                            <option value="VUT">Vanuatu</option>
+                            <option value="VEN">Venezuela, Bolivarian Republic of</option>
+                            <option value="VNM">Viet Nam</option>
+                            <option value="VGB">Virgin Islands, British</option>
+                            <option value="VIR">Virgin Islands, U.S.</option>
+                            <option value="WLF">Wallis and Futuna</option>
+                            <option value="ESH">Western Sahara</option>
+                            <option value="YEM">Yemen</option>
+                            <option value="ZMB">Zambia</option>
+                            <option value="ZWE">Zimbabwe</option>
+                          </select>
+                        </div>-->
+                      </div>
+                      <div class="row" style="margin-top: 5px;">
+                         <div class="col-md-6" style="padding-right: 0px">
+                          <input type="number" class="form-control" name="phone" placeholder="Phone">
+                        </div>
+                        <div class="col-md-6" style="padding-right: 0px">
+                          <select id="minority" name="minority" class="form-control" required >
+                            <option value="">Minority</option>
+                            <option value="Indigenous">Indigenous</option>
+                            <option value="Refugee">Refugee</option>
+                            <option value="New Comer">New Comer</option>
+                            <option value="Other">Other Visible Minority</option>
+                            <option value="N/A">N/A</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+                <div class="col-md-6">
+                  <div class="box-body">
+                    <div class="form-group">
+                      <label>Add Items</label>
+                      <div class="row add-item">
+                        <div class="col-md-6" style="padding-right: 5px">
+                          <select class="item-category form-control">
+                            <option></option>
+                          </select>
+                        </div>
+                        <div class="col-md-6" style="padding-left: 5px">
+                          <select name="item" class="item-size form-control">
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="box-footer">
+                    <button type="submit" id="add-item" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Add Item</button>
+                  </div>
+                  <!-- /.box-body -->
+                </div>
+              </div>
+              <div class="box-footer">
+                <button type="submit" id="submit-appointment" class="btn btn-success pull-right">Submit</button>
+              </div>
+              <div style="clear:both;;"></div>
+            </form>
+            <!-- /.box-header -->
+            <!-- form start -->
+            
+          </div>
+          <!-- /.box -->
+        </div>
+        <!--/.col (left) -->
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2018 <a href="http://workinggear.ca">Working Gear</a>.</strong> All rights
+    reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<script>
+$(function () {
+  function ajax(method, url, data, callback) {
+    let request;
+
+    if (method === "POST")        request = $.ajax({ type: "POST", url, data: JSON.stringify(data), contentType: "application/json; charset=utf-8", dataType: "json" });
+    else if(method === "PUT")     request = $.ajax({ type: 'PUT', url, data });
+    else if(method === "DELETE")  request = $.ajax({ type: 'DELETE', url });
+    else                          request = $.get(url);
+
+    request
+    .done(function(response) {
+      callback(null, response);
+    }).fail(function(err) {
+      callback(err);
+    });
+  }
+
+
+  // slots
+  ajax('GET', `http://localhost:3000/slots`, null, function(err, slots) {
+    if(err) { return; }
+    let days = Object.keys(slots);
+
+    // add days
+    days.forEach(day => { 
+      $("select#slot-day").append(`<option value="${day}">${day}</option>`);
+    });
+
+    // add minutes
+    $("select#slot-day").change(function(e) {
+      $("select#slot-minute").html('');
+      let day = $(this).val();
+      if(!day) { return; }
+      let minutes = slots[day];
+      minutes.forEach(min => { 
+        $("select#slot-minute").append(`<option value="${min.slotId}">${min.time}</option>`);
+      });
+    });
+  });
+
+  // items
+  ajax('GET', `http://localhost:3000/items`, null, function(err, items) {
+    if(err) { return; }
+    let categories = Object.keys(items);
+    console.log(items);
+
+    // add items categories
+    categories.forEach(cat => { 
+      $("select.item-category").append(`<option value="${cat}">${cat}</option>`);
+    });
+
+    // add sizes
+    function onCategoryChange() {
+      $("select.item-category:last").change(function(e) {
+        var ele = $(this).parent().parent().find("select.item-size");
+        $(ele).html('');
+        let cat = $(this).val();
+        if(!cat) { return; }
+
+        var sizes = items[cat];
+        sizes.forEach(size => { 
+          $(ele).append(`<option value="${size._id}">${size.size}</option>`);
+        });
+      });      
+    }
+    onCategoryChange();
+
+    $("button#add-item").click(function(e) {
+      e.preventDefault();
+
+      let ele = `<div class="row add-item" style="margin-top: 5px;">`
+      ele += `<div class="col-md-6" style="padding-right: 5px">
+                <select class="item-category form-control" required>`;
+      ele += `<option></option>`;
+      
+      categories.forEach(cat => {
+        ele += `<option value="${cat}">${cat}</option>`
+      });
+
+      ele += `</select></div>
+              <div class="col-md-6" style="padding-left: 5px">
+                <select name="item" class="item-size form-control" required></select>
+              </div>`;
+      ele += `</div>`;
+
+      $("div.row.add-item:last").after(ele);
+      onCategoryChange();
+
+      
+      return false; 
+    });
+
+  });
+
+  // submit
+  $("button#submit-appointment").click(function(e) {
+    e.preventDefault();
+
+    var data = {
+      slotId: '',
+      client: {} ,
+      appointment: {},
+      items: [1,2,4]
+    };
+
+    $('form#form-appointment').serialize().split("&").forEach(function(curr){
+      var p = curr.split("=");
+      var key = decodeURIComponent(p[0]);
+      var value = decodeURIComponent(p[1]);
+      if(!value) { return; }
+
+      if(key === 'item') { 
+        if(data.appointment.items === undefined) { data.appointment.items = []; }
+        data.appointment.items.push(value);
+      } else if (key === 'agencyId') {
+        data.appointment[key] = value; 
+      } else if (key === 'name' || key === 'age' || key === 'country' || key === 'minority' || key === 'gender' || key === 'job' || key === 'phone' || key === 'email') {
+        if(key === 'country') { value = $(`option[value="${value}"]`).text(); }
+        data.client[key] = value; 
+      } else if (key === 'slotId') {
+        data.slotId = value;
+      }
+    });
+
+    if(!data.slotId || !data.client.name) {
+      return alert('Missing values.');
+    }
+    
+    // send data
+    console.log(data);
+    ajax('POST', `http://localhost:3000/appointment`, data, function(err, response) {
+      if(err || response.error) { return alert(err || response.error); }
+      alert('Appointment Created!.');
+      location.reload();
+    });
+
+    return false; 
+  });
+
+});
+</script>
+</body>
+</html>
